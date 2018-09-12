@@ -37,7 +37,7 @@ map.on('click', function(e) {
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
     .setHTML(
-      '<iframe class=\"airtable-embed\" src=\"https://airtable.com/embed/shr6CMiMqmgV4BYin?backgroundColor=orange\?prefill_Name=\"+feature.libelle_gare frameborder=\"0\" width=\"100%\" height=\"533\" style=\"background: transparent; border: 1px solid #ccc;\"></iframe>'
+      '<iframe class=\"airtable-embed\" src=\"https://airtable.com/shr6CMiMqmgV4BYin?prefill_Name=' + feature.properties.libelle_ga + '\" frameborder=\"0\" width=\"100%\" height=\"533\" style=\"background: transparent; border: 1px solid #ccc;\"></iframe>'
     )
     .setLngLat(feature.geometry.coordinates)
     .addTo(map);
